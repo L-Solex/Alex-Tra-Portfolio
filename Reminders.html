@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <nav class="navbar">
+        <div class="nav-icon">Alex Tra's Portfolio</div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Reminders.html">Reminders Project</a></li>
+            <li><a href="https://alex-solex-tra.carrd.co" target="_blank">Portfolio Website</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <title>Reminders</title>
+</head>
+<body>
+    <h1>Reminders Page</h1>
+    <p>This page is a proof of concept for a mobile/web app that I plan to make in the future.</p>
+    <div class="app">
+        <div class="reminders-list">
+            <h2>Reminders Application</h2>
+            <form id="reminder-form" class="reminder-form">
+                <legend id="reminder-title">Reminders</legend>
+                <label for="new-reminder">Add a new reminder: </label>
+                <input type="text" id="new-reminder" name="new-reminder" placeholder="Enter your reminder here" required>
+                <br>
+                <label for="reminder-date"> Due Date: </label>
+                <input type="date" id="reminder-date" name="reminder-date" required>
+                <br>
+                <label for="reminder-priority">Priority: </label>
+                <select id="reminder-priority" name="reminder-priority">
+                    <option value="" disabled selected>Select priority</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <br>
+                <label for="reminder-notes">Additional Notes: </label>
+                <br>
+                <textarea id="reminder-notes" name="reminder-notes" rows="4" cols="30" placeholder="Enter any additional notes here"></textarea>
+                <br>
+                <button type="submit">Add Reminder</button>
+            </form>
+        </div>
+        <div class="reminders-items">
+            <h2>Saved Reminders</h2>
+            <input type="button" value="Sort by Due Date" id="sort-date-btn">
+            <input type="button" value="Sort by Priority" id="sort-priority-btn">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reminder</th>
+                        <th>Due Date</th>
+                        <th>Priority</th>
+                        <th>Notes</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="reminders-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <template id="reminder-row-template">
+        <tr class="reminder-row">
+            <td class="cell-text"></td>
+            <td class="cell-date"></td>
+            <td class="cell-priority"></td>
+            <td class="cell-notes"></td>
+            <td class="cell-actions">
+                <button class="action-btn btn-complete" type="button">Complete</button>
+                <button class="action-btn btn-edit" type="button">Edit</button>
+                <button class="action-btn btn-delete" type="button">Delete</button>
+                <button class="action-btn btn-up" type="button" title="Move up">▲</button>
+                <button class="action-btn btn-down" type="button" title="Move down">▼</button>
+            </td>
+        </tr>
+    </template>
+</body>
+
+</html>

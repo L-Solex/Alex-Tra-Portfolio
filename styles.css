@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+h1,h2,p,ul,ol,li {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h1 {
+    text-decoration: underline;
+}
+/* Setting borders and background for contact info and goals sections */
+.contact-info, .goals, .projects-list, .projects-wishlist {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.goal-list, .projects-done, .projects-wishlist-item {
+    list-style-type: none;
+}
+
+/* Hyperlink Styles */
+a {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+a:active {
+    color: black;
+}
+
+address {
+    font-style: normal;
+    text-align: center;
+}
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-icon {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    transition: background-color 0.3s;
+}
+
+.nav-list a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+figure img {
+    border: 2px solid black;
+    margin: auto;
+    display: block;
+}
+
+.BL-Panels {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+}
+
+#blue-lock-episode {
+    display: block;
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+/* Reminders Page Styles */
+.reminders-list, .reminders-items {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#reminder-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#reminder-form label {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+.reminders-list, .reminders-items {
+    flex: 1;
+}
+
+.reminders-list {
+    max-width: 400px;
+}
+
+.reminders-items {
+    max-width: 1000px;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+/* .reminder-form {
+    margin-bottom: 20px;
+} */
+
+button[type="submit"] {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+button[type="submit"]:active {
+    background-color: #3e8e41;
+}
+
+#sort-date-btn, #sort-priority-btn {
+    margin: 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #008CBA;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#sort-date-btn:hover, #sort-priority-btn:hover {
+    background-color: #007bb5;
+}
+
+#sort-date-btn:active, #sort-priority-btn:active {
+    background-color: #006494;
+}
+
+#completed-reminders-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+table, th, td {
+    border: 1px solid black;
+    margin: auto;
+    /* border-collapse: collapse; */
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Action buttons in the table rows */
+.action-btn {
+    margin: 2px;
+    padding: 4px 8px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #eee;
+    cursor: pointer;
+}
+
+.btn-complete { 
+    background: #4CAF50; 
+    color: white; 
+    border-color: #3e8e41; 
+}
+
+.btn-complete:hover { 
+    background: #45a049; 
+}
+
+.btn-complete:active { 
+    background: #3e8e41; 
+}
+
+.btn-edit { 
+    background: #ffb74d; 
+    color: black; 
+    border-color: #e69a1a; 
+}
+
+.btn-edit:hover { 
+    background: #ffa726; 
+}
+
+.btn-edit:active { 
+    background: #e68900; 
+}
+
+.btn-delete { 
+    background: #f44336; 
+    color: white; 
+    border-color: #d32f2f; 
+}
+
+.btn-delete:hover { 
+    background: #e53935; 
+}
+
+.btn-delete:active { 
+    background: #c62828; 
+}
+
+.btn-up, .btn-down { 
+    background: #90caf9; 
+    color: black; 
+    border-color: #5aa0e6; 
+}
+
+.btn-up:hover, .btn-down:hover { 
+    background: #64b5f6; 
+}
+
+.btn-up:active, .btn-down:active { 
+    background: #42a5f5; 
+}
+
+.reminder-row.completed { 
+    text-decoration: line-through; 
+    opacity: 0.7; 
+}
